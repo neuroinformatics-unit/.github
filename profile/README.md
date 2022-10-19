@@ -1,1 +1,1 @@
-Internal documentation for the UCL SWC/GCNU Neuroinformatics Unit.
+UCL SWC/GCNU Neuroinformatics Unit
