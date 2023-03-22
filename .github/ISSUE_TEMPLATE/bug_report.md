@@ -6,7 +6,7 @@ labels: bug
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+A clear and concise description of what the bug is. If possible, please submit a [Minimal Reproducible Example](https://en.wikipedia.org/wiki/Minimal_reproducible_example).
 
 **To Reproduce**
 Please enter full details of how to reproduce this bug.
