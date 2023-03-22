@@ -3,7 +3,7 @@
 ## Introduction
 
 **Contributors to NIU projects are absolutely encouraged**, whether to fix a
-bug, develop a new feature, or add to the documentation
+bug, develop a new feature, or add to the documentation.
 
 If you're unsure where to start, create an issue on the relevant repository. If
 for any reason, you'd rather not reach out in public, feel free to
@@ -29,7 +29,7 @@ and then run
 pip install -e .[dev]
 ```
 
-Or if using `zsh`:
+Or if using `zsh` (the default on new Apple machines):
 
 ```sh
 pip install -e '.[dev]'
@@ -50,12 +50,11 @@ to the following conventions:
 - Unless someone approves the PR with optional comments, the PR is immediately merged by the approving reviewer.
 - Please merge via "Squash and Merge" on GitHub to maintain a clean commit history.
 - Ask for a review from someone specific if you think they would be a particularly suited reviewer (possibly noting
-  why they are suited on the PR description)
+  why they are suited on the PR description).
 
 ### Formatting and QC
 
-- We use [Black](https://black.readthedocs.io/en/stable/), [ruff]
-  (https://beta.ruff.rs/docs/), and [mypy](https://mypy.readthedocs.io/en/stable/) to ensure a consistent
+- We use [Black](https://black.readthedocs.io/en/stable/), [ruff](https://beta.ruff.rs/docs/), and [mypy](https://mypy.readthedocs.io/en/stable/) to ensure a consistent
   code style.
 - The above tools are automated in the using [pre-commit](https://pre-commit.com/). Running `pre-commit install` once locally will set up the pre-commit hooks to be executed automatically before each commit.
 
