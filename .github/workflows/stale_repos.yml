@@ -1,0 +1,36 @@
+# Action to highlight inactive repos (defined as no activity for > 180 days)
+# Designed to ensure that any repos we are no longer working on are either:
+# - Highlighted for any preventive maintenance (e.g., updating dependencies)
+# - Archived to ensure nobody is using unmaintained tools
+
+# An issue will be raised (assigned to @adamltyson) that will highlight these repos.
+
+name: stale repo identifier
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 2 1 * *'
+
+jobs:
+  build:
+    name: stale repo identifier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run stale_repos tool
+        uses: docker://ghcr.io/github/stale_repos:v1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          ORGANIZATION: ${{ secrets.ORGANIZATION }}
+          INACTIVE_DAYS: 180 # ~6 months
+
+      - name: Create issue
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Stale repository report
+          content-filepath: ./stale_repos.md
+          assignees: adamltyson
