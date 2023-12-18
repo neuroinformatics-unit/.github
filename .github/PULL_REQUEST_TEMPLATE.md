@@ -1,5 +1,7 @@
 Before submitting a pull request (PR), please read the [contributing guide](https://github.com/neuroinformatics-unit/.github/blob/main/CONTRIBUTING.md).
 
+Please fill out as much of this template as you can, but if you have any problems or questions, just leave a comment and we will help out :)
+
 ## Description
 
 **What is this PR**
